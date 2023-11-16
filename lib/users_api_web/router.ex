@@ -7,6 +7,11 @@ defmodule UsersApiWeb.Router do
 
   scope "/api", UsersApiWeb do
     pipe_through :api
+    # resources "/users", UserController, except: [:new, :edit]
+    get "/users", UserController, :index
+    put "/users", UserController, :edit
+    post "/users", UserController, :create
+    delete "/users", UserController, :delete
   end
 
   # Enables LiveDashboard only for development
