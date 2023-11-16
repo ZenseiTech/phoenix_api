@@ -41,9 +41,10 @@ https://hexdocs.pm/ecto_sql/Ecto.Adapters.Postgres.html#module-options
 
 Create users:
 
-curl -X POST http://localhost:4000/api/users -H "Content-Type: application/json" -d '{"user":{"name":"Jorge","email":"barizonte@gmail.com","address":"1791 Folkway Drive","role":"Admin"}}'
+    curl -X POST http://localhost:4000/api/users -H "Content-Type: application/json" -d '{"user":{"name":"Jorge","email":"barizonte@gmail.com","address":"1791 Folkway Drive","role":"Admin"}}'
 
 or
 
 Using Httpie
-http --print=b --output temp.html POST http://localhost:4000/api/users < data.json
+
+    http --print=b --output temp.html POST http://localhost:4000/api/users < load_data/data.json
