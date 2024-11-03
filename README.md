@@ -1,5 +1,9 @@
 https://blog.logrocket.com/build-rest-api-elixir-phoenix/
 
+# Running Postgress using Docker
+
+    docker run --name phoenix-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -p 5500:5432 -d postgres
+
 # UsersApi
 
 To start your Phoenix server:
@@ -31,10 +35,6 @@ Start your Phoenix app with:
 You can also run your app inside IEx (Interactive Elixir) as:
 
     $ iex -S mix phx.server
-
-Running Postgress using Docker
-
-docker run --name phoenix-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -p 5500:5432 -d postgres
 
 Ecto Documentation
 https://hexdocs.pm/ecto_sql/Ecto.Adapters.Postgres.html#module-options
